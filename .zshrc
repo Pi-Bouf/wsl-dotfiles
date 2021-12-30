@@ -106,7 +106,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias toolbox="/home/dev/jetbrains-toolbox/jetbrains-toolbox"
+alias toolbox="/home/dev/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Add paths
+export "PATH=$HOME/.local/share/JetBrains/Toolbox/shortcuts/:$PATH"
