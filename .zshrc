@@ -113,3 +113,6 @@ alias toolbox="/home/dev/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox"
 
 # Add paths
 export "PATH=$HOME/.local/share/JetBrains/Toolbox/shortcuts/:$PATH"
+
+export WSL_ip_line=$(ipconfig.exe | grep "WSL" -n | awk -F ":" '{print $1+4}')
+export DISPLAY=$(ipconfig.exe | awk -v a=$WSL_ip_line '{if (NR==a) print $NF":0.0"}' | tr -d "\r")
